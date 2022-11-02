@@ -3,6 +3,7 @@ using System;
 
 namespace FiguresConsoleApp
 {
+    // Класс наследуемый от класса библиотеки из внешнего проекта
     internal class Rectangle : Figure
     {
         public double AB { get; private set; }
@@ -18,6 +19,7 @@ namespace FiguresConsoleApp
             BC = bc;
         }
 
+        // Реализация родительского абстрактного метода
         public override double Square()
         {
             return AB * BC;

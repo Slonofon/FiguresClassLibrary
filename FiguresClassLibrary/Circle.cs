@@ -2,6 +2,7 @@
 
 namespace FiguresClassLibrary
 {
+    // Класс круг, потомок абстрактного класса Figure
     public class Circle : Figure
     {
         public Circle(double radius)
@@ -12,6 +13,7 @@ namespace FiguresClassLibrary
             Radius = radius;
         }
 
+        // Реализация родительского абстрактного метода
         public double Radius { get; private set; }
 
         public override double Square()

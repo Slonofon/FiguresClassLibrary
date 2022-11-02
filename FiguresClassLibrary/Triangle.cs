@@ -2,6 +2,7 @@
 
 namespace FiguresClassLibrary
 {
+    // Класс треугольник, потомок абстрактного класса Figure
     public class Triangle : Figure
     {
         public double AB { get; private set; }
@@ -10,6 +11,7 @@ namespace FiguresClassLibrary
 
         public double CA { get; private set; }
 
+        // Свойство определяющее прямоугольный треугольник или нет
         public bool IsRight
         {
             get
@@ -36,6 +38,7 @@ namespace FiguresClassLibrary
             return AB + BC + CA;
         }
 
+        // Реализация родительского абстрактного метода
         public override double Square()
         {
             var halfPerimeter = GetPerimeter() / 2;

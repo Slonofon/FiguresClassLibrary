@@ -7,24 +7,26 @@ namespace FiguresConsoleApp
     {
         static void Main(string[] args)
         {
-            Figure fTriangle = new Triangle(3, 4, 5);
-            Console.WriteLine("Площадь фигуры {0} равна {1}",
-                fTriangle.ToString(), fTriangle.Square());
+            // Пример использования классов библиотеки
+            Figure fTriangleRight = new Triangle(3, 4, 5);
+            WriteResults(fTriangleRight.ToString(), fTriangleRight.Square());
 
-            Figure fTriangle1 = new Triangle(5, 6, 7);
-            Console.WriteLine("Площадь фигуры {0} равна {1}",
-                fTriangle1.ToString(), fTriangle1.Square());
+            Figure fTriangleNotRight = new Triangle(5, 6, 7);
+            WriteResults(fTriangleNotRight.ToString(), fTriangleNotRight.Square());
 
             Figure fCircle = new Circle(1);
-            Console.WriteLine("Площадь фигуры {0} равна {1}",
-                fCircle.ToString(), fCircle.Square());
+            WriteResults(fCircle.ToString(), fCircle.Square());
 
+            // Пример использования "внутреннего" класса наследуемого от класса библиотеки
             Figure fRectangle = new Rectangle(4, 5);
-            Console.WriteLine("Площадь фигуры {0} равна {1}",
-                fRectangle.ToString(), fRectangle.Square());
-
+            WriteResults(fRectangle.ToString(), fRectangle.Square());
 
             Console.ReadKey();
+        }
+
+        private static void WriteResults(string sFigure, double dSquare) 
+        {
+            Console.WriteLine("Площадь фигуры '{0}' равна {1}", sFigure, dSquare);
         }
     }
 }
